@@ -1,16 +1,19 @@
-* {
-    background-color: darkseagreen;
+body {
+    background-image: url('mountains\ 3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 ul {
     list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-    background-color: mediumorchid;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgb(48, 46, 117);
 }
 li a {
     display: block;
-    color: gray;
+    color: rgb(255, 255, 255);
     padding: 8px 16px;
     text-decoration: none;
     }
@@ -19,4 +22,4 @@ li a {
  li a:hover{
     background-color: #555;
     color: white;
-  })
+  }
