@@ -1,3 +1,6 @@
-* {
-    background-color: darkseagreen;
+body {
+    background-image: url('mountains\ 3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
