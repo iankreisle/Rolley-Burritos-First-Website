@@ -27,3 +27,6 @@ li a {
     background-color: #555;
     color: white;
   }
+  .divPad {
+    margin-left:25%;padding:1px 16px;height:1000px;
+  }
