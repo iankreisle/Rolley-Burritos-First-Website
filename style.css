@@ -28,5 +28,5 @@ ul#menu li a:hover{
     color: white;
   }
   div {
-    margin-left:25%;padding:1px 16px;
+    margin-left:25% !important;padding:1px 16px; 
   }
