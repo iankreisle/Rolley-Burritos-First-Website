@@ -1,6 +1,6 @@
 * { margin:0; padding:0; } 
 #page { width:100%; height:100%; background:#CCC; overflow:hidden; } 
-#page:after { content:''; z-index:8; width:100%; height:100%; background:rgba(0,0,0,0.6); position:absolute; }
+#page:after { content:''; z-index:8; width:100%; height:100%; background:rgba(0,0,0,20); position:absolute; }
 #page, #magnify { background:url(https://unsplash.it/2000/2000/?random) center center no-repeat; position:absolute; top:0px; left:0px; background-attachment:fixed; background-size:900px; transition: background-size 300ms, width 300ms, height 300ms; } 
 
 
