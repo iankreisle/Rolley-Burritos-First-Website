@@ -6,4 +6,4 @@
 
 #magnify { z-index:9; width:300px; height:300px; border:none; border-radius:200px; box-shadow:inset 0px 0px 30px 20px rgba(0,0,0,0.1), 0px 0px 10px 0px rgba(0,0,0,.6); margin:-150px; border:10px solid #FFF; background-size:1100px; top:50%; left:50%; over-flow:hidden; } 
 
-#magnify:active { background-size:1500px; }  
+#magnify:active { background-size:1500px; }
