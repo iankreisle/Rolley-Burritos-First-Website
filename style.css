@@ -34,6 +34,33 @@ div {
     margin-left: 25%;
     float: left;
   }
+
+.css-selector {
+  background: linear-gradient(230deg, #88e18f, #e3793d, #9130f3);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 21s ease infinite;
+  -moz-animation: AnimationName 21s ease infinite;
+  animation: AnimationName 21s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+
+
 .row::after {
     content: "";
     clear: both;
