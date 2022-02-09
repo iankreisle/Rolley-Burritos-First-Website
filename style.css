@@ -35,6 +35,23 @@ div {
     float: left;
   }
 
+.circleMove{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px; animation-timing-function: ease-in;}
+  50%  {background-color:red; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px; animation-timing-function: ease-out;}
+}
+
 .css-selector {
   background: linear-gradient(230deg, #88e18f, #e3793d, #9130f3);
   background-size: 600% 600%;
