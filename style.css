@@ -83,6 +83,68 @@ div {
     clear: both;
     display: table;
   }
+  
+  
+  
+  
+  .arrow-up {      
+      /* linear is enabled default, it’s not necessary to add it make it work but it can make your code more expressive */
+    width: 0; 
+    height: 0; 
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    animation-name: triangleColorPalette;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+    border-bottom: 40px solid black;
+    
+  }
+  @keyframes triangleColorPalette {
+    0% {
+      border-bottom-color: #ee6055;
+    }
+    25% {
+      border-bottom-color: #60d394;
+    }
+    50% {
+      border-bottom-color: #aaf683;
+    }
+    75% {
+      border-bottom-color: #ffd97d;
+    }
+    100% {
+      border-bottom-color: #ff9b85;
+    }
+  }
+  
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-top: 20px solid #f00;
+  }
+  
+  .arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    
+    border-left: 60px solid green;
+  }
+  
+  .arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-right:10px solid blue; 
+  }
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
