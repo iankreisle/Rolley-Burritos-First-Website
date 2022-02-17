@@ -16,6 +16,8 @@ ul#menu {
         background-color:rgb(48, 46, 117);
         height: 100%; /* Full height */
         position: fixed; /* Make it stick, even on scroll */
+        top: 0px;
+        bottom: 0px;
         overflow: auto; /* Enable scrolling if the sidenav has too much content */
       }
 ul#menu li a{
@@ -31,7 +33,7 @@ ul#menu li a:hover{
     color: white;
   }
 div {
-    margin-left: 28%;
+    margin-left: 18%;
   }
 
 .circleMove{
