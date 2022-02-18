@@ -8,6 +8,25 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
+body.cyberBackground{
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/957482109078780053/809663528394ED5CF7649BD2655994072CD54E5B/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+p{
+  font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  background-color: rgb(48, 46, 117);
+}
+
 ul#menu {
         list-style-type: none;
         margin: 0;
@@ -32,9 +51,14 @@ ul#menu li a:hover{
     background-color: #555;
     color: white;
   }
+
 div {
     margin-left: 18%;
   }
+
+iframe{
+  margin-left: 18%;
+}
 
 .circleMove{
   width: 100px;
@@ -50,8 +74,10 @@ div {
 
 @keyframes move {
   0%   {background-color:red; left:0px; top:0px; animation-timing-function: ease-in;}
-  50%  {background-color:red; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px; animation-timing-function: ease-out;}
+  30%  {background-color:red; left:0px; top:200px; height: 100px}
+  50%  {background-color:red; left:0px; top:300px; height: 50px}
+  75%  {background-color:red; height: 100px}
+  100% {background-color:red; left:0px; top:0px; height: 100px;}
 }
 
 .circleSize{
@@ -63,6 +89,7 @@ div {
   animation-name: size;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  margin-left: 30%;
 }
 
 @keyframes size {
