@@ -17,6 +17,14 @@ body.cyberBackground{
     color: white;
 }
 
+body.rimworldBackground{
+  background-image: url('https://wallpapercave.com/wp/wp3935722.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
 p{
   font-size: 18px;
 }
