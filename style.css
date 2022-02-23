@@ -1,3 +1,5 @@
+/*Base Website Styling*/
+
 * {
   box-sizing: border-box;
 }
@@ -7,22 +9,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-body.cyberBackground{
-    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/957482109078780053/809663528394ED5CF7649BD2655994072CD54E5B/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-}
-
-body.rimworldBackground{
-  background-image: url('https://wallpapercave.com/wp/wp3935722.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  color: white;
 }
 
 p{
@@ -212,3 +198,23 @@ iframe{
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+/*Ian Style*/
+body.rimworldBackground{
+  background-image: url('https://wallpapercave.com/wp/wp3935722.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+/*Amy Style*/
+body.cyberBackground{
+  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/957482109078780053/809663528394ED5CF7649BD2655994072CD54E5B/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+/*Spencer Style*/
