@@ -1,5 +1,14 @@
 /*Base Website Styling*/
 
+/*Using a separate .css file called style.css instead of inline styling or the style tag, have 
+each group member change five to ten different style properties throughout all your webpages using 
+CSS selectors (like h1, li, a, etc) for at least 5 different kinds of html tags that occur in 
+throughout your team website (set this up so that every html page links to the same style.css page, 
+don’t use inline styling or the <style> tag anywhere but in the style.html you did in the previous step).  
+Document these contributions in your WDD.*/
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -217,6 +226,7 @@ body.cyberBackground{
   color: white;
 }
 
+
 /*Spencer Style*/
 body.guildwarsBackground{
   background-image: url('https://64.media.tumblr.com/1e429bc432e16632ee0d5311db79e8f5/tumblr_osi93vr4Wq1txdpero2_r1_540.gifv');
@@ -227,4 +237,21 @@ body.guildwarsBackground{
 }
 a.guildwarsBackground{
   color: red
+}
+
+
+#darkBack{
+  background-color: rgb(48, 46, 117, 0.9);
+  margin-left: 18%;
+  width: 1200px;
+}
+
+.divAdjust{
+  margin-left: 0%;
+  padding: 3%;
+}
+
+#name{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
 }
