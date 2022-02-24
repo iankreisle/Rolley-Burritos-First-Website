@@ -31,17 +31,17 @@ h1#header {
 }
 
 ul#menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 15%;
-        background-color:rgb(48, 46, 117);
-        height: 100%; /* Full height */
-        position: fixed; /* Make it stick, even on scroll */
-        top: 0px;
-        bottom: 0px;
-        overflow: auto; /* Enable scrolling if the sidenav has too much content */
-      }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color:rgb(48, 46, 117);
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  top: 0px;
+  bottom: 0px;
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
 ul#menu li a{
     display: block;
     color: rgb(255, 255, 255);
@@ -55,7 +55,7 @@ ul#menu li a:hover{
     color: white;
   }
 
-div {
+div.content {
     margin-left: 18%;
   }
 
@@ -282,12 +282,10 @@ a.guildwarsBackground{
 
 #darkBack{
   background-color: rgb(48, 46, 117, 0.9);
-  margin-left: 18%;
   width: 1200px;
 }
 
 .divAdjust{
-  margin-left: 0%;
   padding: 3%;
 }
 
