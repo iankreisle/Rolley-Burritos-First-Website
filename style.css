@@ -218,3 +218,13 @@ body.cyberBackground{
 }
 
 /*Spencer Style*/
+body.guildwarsBackground{
+  background-image: url('https://64.media.tumblr.com/1e429bc432e16632ee0d5311db79e8f5/tumblr_osi93vr4Wq1txdpero2_r1_540.gifv');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+a.guildwarsBackground{
+  color: red
+}
