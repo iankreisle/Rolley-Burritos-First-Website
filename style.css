@@ -353,7 +353,134 @@ body.cyberBackground{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+#darkBack{
+  background-color: rgb(48, 46, 117, 0.9);
+  width: 1200px;
   color: white;
+}
+
+.image-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#henryAndRethDrawing{
+  border: 5px solid gold;
+  border-radius: 4px;
+  height: auto;
+}
+#blissDrawing{
+  border: 5px solid plum;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+#amyPic{
+  border: 5px solid greenyellow;
+  border-radius: 8px;
+  height: auto;
+}
+#deltarunePic{
+  border: 5px solid white;
+  border-radius: 10px;
+  height: auto;
+}
+
+.heart {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 550px;
+  left: 450px;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  transform: rotate(-45deg);
+  animation-name: beat-and-color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.heart::after {
+  background-color: red;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0px;
+  left: 10px;
+  animation-name: color-change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.heart::before {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: 0px;
+  animation-name: color-change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes beat-and-color {
+  0% {
+    background-color: red;
+    transform: scale(1) rotate(-45deg);
+  }
+  17%{
+    background-color: orange;
+  }
+  34%{
+    background-color: yellow;
+  }
+  50% {
+    transform: scale(0.6) rotate(-45deg);
+  }
+  51%{
+    background-color:#88e18f;
+  }
+  68%{
+    background-color:cornflowerblue;
+  }
+  85%{
+    background-color:blueviolet;
+  }
+  100%{
+    background-color: red;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background-color: red;
+  }
+  17%{
+    background-color: orange;
+  }
+  34%{
+    background-color: yellow;
+  }
+  51% {
+    background-color:#88e18f;
+  }
+  68%{
+    background-color:cornflowerblue;
+  }
+  85%{
+    background-color:blueviolet;
+  }
+  100%{
+    background-color: red;
+  }
 }
 
 
@@ -379,15 +506,6 @@ img#spencerPic{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
-
-#darkBack{
-  background-color: rgb(48, 46, 117, 0.9);
-  width: 1200px;
-}
-
-.divAdjust{
-  padding: 3%;
 }
 
 #name{
