@@ -268,6 +268,22 @@ p#textbox{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.imageSize{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  position: relative;
+  animation-name: imageResize;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes imageResize {
+  0%   {background-color:purple; width:1px; height:1px;}
+  100%  {background-color:purple; width:200px; height:250px;}
+}
+
 /*Amy Style*/
 body.cyberBackground{
   background-image: url('https://steamuserimages-a.akamaihd.net/ugc/957482109078780053/809663528394ED5CF7649BD2655994072CD54E5B/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
