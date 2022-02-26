@@ -285,6 +285,30 @@ iframe{
     background-color: #555;
   }
 
+  h1{
+    font-size: 42pt;
+  }
+
+  h2{
+    font-size: 36pt;
+  }
+
+  h3{
+    font-size: 30pt;
+  }
+
+  h4{
+    font-size: 24pt;
+  }
+
+  h5{
+    font-size: 18pt;
+  }
+
+  h6{
+    font-size: 14pt;
+  }
+
 
 
 /*Ian Style*/
