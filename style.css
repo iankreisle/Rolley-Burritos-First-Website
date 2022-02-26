@@ -30,6 +30,9 @@ a:hover{
 p{
   text-align: center;
 }
+p.nested{
+  text-align: left;
+}
 
 
 img.titleImage{
