@@ -7,7 +7,10 @@ throughout your team website (set this up so that every html page links to the s
 don’t use inline styling or the <style> tag anywhere but in the style.html you did in the previous step).  
 Document these contributions in your WDD.*/
 
-
+img.titleImage{
+  width: 500px;
+  height: 500px;
+}
 
 * {
   box-sizing: border-box;
