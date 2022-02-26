@@ -7,7 +7,18 @@ throughout your team website (set this up so that every html page links to the s
 don’t use inline styling or the <style> tag anywhere but in the style.html you did in the previous step).  
 Document these contributions in your WDD.*/
 
+@keyframes triangularMove {
+  0%   {border-left-color:red; left:0px; top:0px;}
+  25%  {border-left-color:yellow; left:200px; top:0px;}
+  50%  {border-left-color:blue; left:200px; top:200px;}
+  75%  {border-left-color:green; left:0px; top:200px;}
+  100% {border-left-color:red; left:0px; top:0px;}
+}
 
+img.titleImage{
+  width: 500px;
+  height: 500px;
+}
 
 * {
   box-sizing: border-box;
@@ -182,8 +193,13 @@ iframe{
     height: 0; 
     border-top: 60px solid transparent;
     border-bottom: 60px solid transparent;
-    
-    border-left: 60px solid green;
+    animation-name: triangularMove;
+    position: relative;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+    border-left: 40px solid black;
   }
   
   .arrow-left {
@@ -302,10 +318,13 @@ body.guildwarsBackground{
   background-size: cover;
   color: white;
 }
-a.guildwarsBackground{
+a#guildwarsLink{
   color: red
 }
-
+img#spencerPic{
+  width: 300px;
+  height: 300px;
+}
 
 #darkBack{
   background-color: rgb(48, 46, 117, 0.9);
