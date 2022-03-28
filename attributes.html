@@ -1,8 +1,3 @@
-<!--In the attributes file, get familiar with attributes by first having each group member select the elements 
-  from nested.html and tags.html that they’re proud of, copy them to the attributes.html page, and then add at 
-  least 10 attributes for each member throughout the page.  You can learn about attributes here: 
-  https://www.w3schools.com/html/html_attributes.asp -->
-
 <!DOCTYPE html>
 <html>
   <head lang="en">
@@ -13,93 +8,109 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <ul class="css-selector" id="menu">
-      <li><a href=index.html>Home</a></li>
-      <li><a href=nested.html>Nested Examples</a></li>
-      <li><a href=tags.html>Tag Examples</a></li>
-      <li><a href=Amy.html>Amy’s Page</a></li>
-      <li><a href=Ian.html>Ian’s Page</a></li>
-      <li><a href=Spencer.html>Spencer's Page</a></li>
-      <li><a href=style.html>Style</a></li>
-      <li><a href="racinggame.html">Game</a></li>
-      <li><a href="random.html">Random</a></li>
-    </ul>
-
-    <div class="content">
-      <div>
-        <h1>Attributes</h1>
+    <div class="row">
+      <div class = "col-2">
+        <nav class ="navbar">
+          <ul class ="nav flex-column">
+            <li class ="nav-item"><a class ="nav-link" href="index.html">Home</a></li>
+            <li class ="nav-item"><a class ="nav-link" href="nested.html">Nested Examples</a></li>
+            <li class ="nav-item"><a class ="nav-link" href="attributes.html">Attribute Examples</a></li>
+            <li class ="nav-item"><a class ="nav-link" href="tags.html">Tag Examples</a></li>
+            <li class ="nav-item"><a class ="nav-link" href="Ian.html">Ian’s Page</a></li>
+            <li class ="nav-item"><a class ="nav-link" href="Spencer.html">Spencer's Page</a></li>
+            <li class ="nav-item"><a class ="nav-link" href="style.html">Style</a></li>
+            <li class ="nav-item"><a class ="nav-link" href="racinggame.html">Game</a></li>
+            <li class ="nav-item"><a class ="nav-link" href="random.html">Random</a></li>
+          </ul>
+        </nav>
       </div>
 
-      <div>
-        <h3>Things Amy likes</h3>
-        <ul style = "color:dimgrey;">
-          <li><strong>Modern dance</strong></li>
-          <li title="currently obessed with Deltarune">Video Games</li>
-          <li><b>Drawing</b></li>
-          <li>Plushies</li>
-          <li><small>sleep</small></li>
-        </ul>
-      </div>
 
-      <time datetime="2022-02-08 06:51"></time>
+      <div class="container pt-3">
+        <div class = "col-10 mx-auto">
+          <div>
+            <h1>Attributes</h1>
+          </div>
+    
+          <div>
+            <h3>Things Amy likes</h3>
+            <ul style = "color:dimgrey;">
+              <li><strong>Modern dance</strong></li>
+              <li title="currently obessed with Deltarune">Video Games</li>
+              <li><b>Drawing</b></li>
+              <li>Plushies</li>
+              <li><small>sleep</small></li>
+            </ul>
+          </div>
+    
+          <time datetime="2022-02-08 06:51"></time>
+    
+          <br>
+    
+          <div> 
+            <ul style = "color:dimgrey;"> 
+              <li> 
+                <p dir="ltr">This is a cute <a href="https://youtu.be/OY8MEvVzQzw" target="_blank">animatic</a> I like.</p>
+              </li>
+            </ul> 
+          </div> 
+    
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/OY8MEvVzQzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+          <br>
+    
+          <div>
+            <ul style = "color:dimgrey;"> 
+              <li> 
+                <p>This is a favorite <a href="https://youtu.be/xwrueNeyTzM" target="_blank" draggable="true">meme</a> of mine</p>
+              </li>
+            </ul>
+          </div>
+    
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xwrueNeyTzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+          <br>
+          <div>
+            <img src="mountains 2.jpg" alt="cherry blossom tree and lake in front of a mountain" width="400" height="300">
+          </div>
 
-      <br>
+          <div>
+            <p><blockquote  color="grey" cite="https://www.lipsum.com/"><em>"<i>Lorem ipsum dolor sit amet</i>, 
+              <s>consectetur adipiscing elit,</s> 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, 
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, 
+              sunt in culpa qui officia deserunt mollit anim id est laborum."</em></blockquote></p>
+              <p><time datetime="2/08/2022 2:59">02/06/2022</time></p>
+          </div>
 
-      <div> 
-        <ul style = "color:dimgrey;"> 
-          <li> 
-            <p dir="ltr">This is a cute <a href="https://youtu.be/OY8MEvVzQzw" target="_blank">animatic</a> I like.</p>
-          </li>
-        </ul> 
-      </div> 
+          <div>
+            <p>My favorite <a href="https://www.youtube.com/watch?v=IU513suJZzY&ab_channel=OnlyAfro" hreflang="english" target="_blank">meme</a> from Darksouls</p>
+          </div>
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/OY8MEvVzQzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div>
+            <img src="https://i.imgur.com/ubyQIiA.jpeg" alt="fight" width="200px" height="200px">
+          </div>
+          <br>
 
-      <br>
+          <div style="font-size: large;">
+            <p style="color: red;">Ian's Attributes</p>
+          </div>
 
-      <div>
-        <ul style = "color:dimgrey;"> 
-          <li> 
-            <p>This is a favorite <a href="https://youtu.be/xwrueNeyTzM" target="_blank" draggable="true">meme</a> of mine</p>
-          </li>
-        </ul>
-      </div>
+          <div>
+            <img src="https://www.nrcm.org/wp-content/uploads/2018/12/Red-fox-winter-South-China-4-Hal-Winters.jpg" height="300" width="auto" title="Red Fox" alt="Red Fox" style="padding: 25px;">
+          </div>
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/xwrueNeyTzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div>
+            <p style="font-size: small;">Click <a href="https://en.wikipedia.org/wiki/Red_fox">here</a> to visit the wikipedia page on Red Foxes.</p>
+          </div>
 
-      <br>
-      <div>
-        <img src="mountains 2.jpg" alt="cherry blossom tree and lake in front of a mountain" width="400" height="300">
-      </div>
-      <div>
-      <p><blockquote  color="grey" cite="https://www.lipsum.com/"><em>"<i>Lorem ipsum dolor sit amet</i>, 
-        <s>consectetur adipiscing elit,</s> 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, 
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, 
-        sunt in culpa qui officia deserunt mollit anim id est laborum."</em></blockquote></p>
-        <p><time datetime="2/08/2022 2:59">02/06/2022</time></p>
         </div>
-      <div>
-      <p>My favorite <a href="https://www.youtube.com/watch?v=IU513suJZzY&ab_channel=OnlyAfro" hreflang="english" target="_blank">meme</a> from Darksouls</p>
-      </div>
-      <div>
-        <img src="https://i.imgur.com/ubyQIiA.jpeg" alt="fight" width="200px" height="200px">
-      </div>
-
-      <br>
-      <div style="font-size: large;">
-        <p style="color: red;">Ian's Attributes</p>
-      </div>
-      <div>
-        <img src="https://www.nrcm.org/wp-content/uploads/2018/12/Red-fox-winter-South-China-4-Hal-Winters.jpg" height="300" width="auto" title="Red Fox" alt="Red Fox" style="padding: 25px;">
-      </div>
-      <div>
-        <p style="font-size: small;">Click <a href="https://en.wikipedia.org/wiki/Red_fox">here</a> to visit the wikipedia page on Red Foxes.</p>
       </div>
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
