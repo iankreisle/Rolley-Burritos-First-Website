@@ -34,6 +34,7 @@
                     </div>
 
                     <div>
+                        <h1 id="submission"></h1>
                         <h1 id="htmlChange"></h1>
                         <label>HTML Button</label>
                         <button id="htmlButton" onclick="theChange()">HTML Change</button>
@@ -42,16 +43,21 @@
                     
                     <div>
                         <label>CSS Button</label>
-                        <button id="cssButton">Random CSS Change</button>
+                        <button id="cssButton" onclick="cssChange()">Random CSS Change</button>
                     </div>
                     <br>
 
                     <div>
                         <label>Textbox and Submit</label>
-                        <form>
-                            <input type="text" id="text" name="text">
-                            <button id="submitButton" type="submit">Submit</button>
+                        <form onsubmit="return false">
+                            <input type="text" id="myText" name="text" value="Hello There">
+                            <button id="submitButton" type="submit" onclick="submitChange()">Submit</button>
                         </form>
+                    </div>
+                    <br>
+                    <div>
+                        <label>Random Button</label>
+                        <button id="randomButton" onclick="randomChange()">Random Change</button>
                     </div>
                     <br>
                     
