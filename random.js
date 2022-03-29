@@ -16,6 +16,6 @@ var randomNumber = randomChange(0,35);
 console.log(randomNumber);
 for(let i=0; i<randomNumber; i++){
     const element = document.createElement('div');
-    element.innerHTML = '<img src="https://imgur.com/gallery/NUyttbn" alt="budgie">'
+    element.innerHTML = '<img src="https://media3.giphy.com/media/lojcDkpTHNU6T1UOCd/giphy_s.gif" alt="budgie">'
    document.getElementById("pics").appendChild(element);
 }}
