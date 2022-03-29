@@ -14,7 +14,8 @@ function randomChange(min, max){
 }
 
 function randomCreate(){
-var randomNumber = randomChange(1,9);
+var maxRange = document.getElementById("maxRange").value;
+var randomNumber = randomChange(1, maxRange);
 console.log(randomNumber);
 for(let i=0; i<randomNumber; i++){
     const element = document.createElement('div');
