@@ -15,7 +15,9 @@ function setup() {
   isGameOver = false;
   createCanvas(256, 256);
   bike = createSprite(width / 2, height - (bikeImage.height / 2), 0, 0);
-  bike.addImage(bikeImage);
+  var x = bike.addImage(bikeImage);
+  console.log(bike);
+  console.log(x);
   obstacle = createSprite(width / 2, 0, 0, 0);
   obstacle.addImage(obstacleImage);
   obstacle.rotationSpeed = 4.0;
