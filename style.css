@@ -101,14 +101,10 @@ h6{
   top: 0;
   left: 0;
   padding: 0;
-}
-.navbar-nav{
-  position:fixed;
+  position:relative;
 
   width: 15rem;
   height: 100vh;
-  top: 0;
-  left: 0;
  
   background: linear-gradient(230deg, #88e18f, #e3793d, #9130f3);
   background-size: 600% 600%;
