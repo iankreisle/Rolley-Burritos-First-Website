@@ -14,12 +14,20 @@ function randomChange(min, max){
 }
 
 function randomCreate(){
-var maxRange = document.getElementById("maxRange").value;
-var randomNumber = randomChange(1, maxRange);
-console.log(randomNumber);
-for(let i=0; i<randomNumber; i++){
-    const element = document.createElement('div');
-    element.innerHTML = '<img src="https://media3.giphy.com/media/lojcDkpTHNU6T1UOCd/giphy_s.gif" alt="budgie">'
-    document.getElementById("pics").appendChild(element);
+    var minRange = document.getElementById("minRange").value;
+    var maxRange = document.getElementById("maxRange").value;
+    var randomNumber;
+    if(minRange < maxRange){
+        randomNumber = randomChange(minRange, maxRange);
+    }
+    else if (minRange > maxRange){
+        randomNumber = randomChange(maxRange, minRange);
+    }
+    var randomNumber = randomChange(minRange, maxRange);
+    console.log(randomNumber);
+    for(let i=0; i<randomNumber; i++){
+        const element = document.createElement('div');
+        element.innerHTML = '<img src="https://media3.giphy.com/media/lojcDkpTHNU6T1UOCd/giphy_s.gif" width="200" height="200" alt="budgie">';
+        document.getElementById("pics").appendChild(element);
     
 }}
