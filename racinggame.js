@@ -11,9 +11,9 @@ function preload() {
   backgroundImage = loadImage("https://i.imgur.com/aKQOg3G.png");
 }
 
-function setup() {
+/*function setup() {
   isGameOver = false;
-  createCanvas(256, 256);
+  createCanvas(500, 500);
   bike = createSprite(width / 2, height - (bikeImage.height / 2), 0, 0);
   var x = bike.addImage(bikeImage);
   console.log(bike);
@@ -21,7 +21,7 @@ function setup() {
   obstacle = createSprite(width / 2, 0, 0, 0);
   obstacle.addImage(obstacleImage);
   obstacle.rotationSpeed = 4.0;
-}
+}*/
 
 function draw() {
   if (isGameOver) {
