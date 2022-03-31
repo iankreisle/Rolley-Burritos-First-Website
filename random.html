@@ -19,42 +19,23 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <nav class="navbar" style="flex: 1 1 auto">
+          <nav class="navbar" style="flex: 1 1 auto;">
             <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="nested.html">Nested Examples</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="attributes.html"
-                  >Attribute Examples</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="tags.html">Tag Examples</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Ian.html">Ian’s Page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Spencer.html">Spencer's Page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="style.html">Style</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="racinggame.html">Game</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="random.html">Random</a>
-              </li>
+              <li class ="nav-item"><a class ="nav-link" href="index.html">Home</a></li>
+              <li class ="nav-item"><a class ="nav-link" href="Amy.html">Amy's Page</a></li>
+              <li class ="nav-item"><a class ="nav-link" href="Ian.html">Ian’s Page</a></li>
+              <li class ="nav-item"><a class ="nav-link" href="Spencer.html">Spencer's Page</a></li>
+              <li class ="nav-item"><a class ="nav-link" href="nested.html">Nested Examples</a></li>
+              <li class ="nav-item"><a class ="nav-link" href="attributes.html">Attribute Examples</a></li>
+              <li class ="nav-item"><a class ="nav-link" href="tags.html">Tag Examples</a></li>
+              <li class ="nav-item"><a class ="nav-link" href="style.html">Style</a></li>
+              <li class ="nav-item"><a class ="nav-link" href="racinggame.html">Game</a></li>
+              <li class ="nav-item"><a class ="nav-link active" href="random.html">Random</a></li>
             </ul>
           </nav>
         </div>
 
-        <div class="col">
+        <div class="col-9">
           <div class="container">
             <div class="row">
               <h1>Welcome to the randomized page!</h1>
@@ -62,15 +43,19 @@
 
             <div class="row">
               <h1 id="submission"></h1>
+            </div>
+            <div class="row">
               <h1 id="htmlChange"></h1>
+            </div>
+            <div class="row">
               <label>HTML Button</label>
-              <button id="htmlButton" onclick="theChange()">HTML Change</button>
+              <button id="htmlButton" class="btn btn-primary" onclick="theChange()">HTML Change</button>
             </div>
             <br />
 
             <div class="row">
               <label>CSS Button</label>
-              <button id="cssButton" onclick="cssChange()">CSS Change</button>
+              <button id="cssButton" class="btn btn-primary" onclick="cssChange()">CSS Change</button>
             </div>
             <br />
 
@@ -85,6 +70,7 @@
                 />
                 <button
                   id="submitButton"
+                  class="btn btn-primary"
                   type="submit"
                   onclick="submitChange()"
                 >
@@ -94,7 +80,7 @@
             </div>
             <br />
             <div class="row">
-              <label>min Range</label>
+              <label>Min Range</label>
               <input
                 type="text"
                 id="minRange"
@@ -104,7 +90,7 @@
               />
             </div>
             <div class="row">
-              <label>max Range</label>
+              <label>Max Range</label>
               <input
                 type="text"
                 id="maxRange"
@@ -112,7 +98,9 @@
                 name="maxRange"
                 value="10"
               />
-              <button id="randomButton" onclick="randomCreate()">
+            </div>
+            <div class="row">
+              <button id="randomButton" class="btn btn-primary" onclick="randomCreate()">
                 Random Change
               </button>
               <div id="pics" class="row"></div>
