@@ -1,63 +1,145 @@
-var isGameOver;
-var bike;
-var bikeImage;
-var obstacle;
-var obstacleImage;
-var backgroundImage;
-
-function preload() {
-  bikeImage = loadImage("https://i.imgur.com/N5uCbDu.png");
-  obstacleImage = loadImage("https://i.imgur.com/OdL0XPt.png");
-  backgroundImage = loadImage("https://i.imgur.com/aKQOg3G.png");
+var canvas = document.getElementById("game");
+var ctx = canvas.getContext("2d");
+function floor(x, height) {
+  this.x = x;
+  this.width = 700;
+  this.height = height;
 }
-
-/*function setup() {
-  isGameOver = false;
-  createCanvas(500, 500);
-  bike = createSprite(width / 2, height - (bikeImage.height / 2), 0, 0);
-  var x = bike.addImage(bikeImage);
-  console.log(bike);
-  console.log(x);
-  obstacle = createSprite(width / 2, 0, 0, 0);
-  obstacle.addImage(obstacleImage);
-  obstacle.rotationSpeed = 4.0;
-}*/
-
-function draw() {
-  if (isGameOver) {
-    gameOver();
-  } else {
-    if (obstacle.overlap(bike)) {
-      isGameOver = true;
+var world = {
+  height: 480,
+  width: 640,
+  gravity: 10,
+  highestFloor: 240,
+  speed: 5,
+  distanceTravelled: 0,
+  maxSpeed: 40,
+  tilesPassed: 0,
+  autoScroll: true,
+  floorTiles: [
+    new floor(0, 140)
+  ],
+  stop: function () {
+    this.autoScroll = false;
+  },
+  moveFloor: function () {
+    for (index in this.floorTiles) {
+      var tile = this.floorTiles[index];
+      tile.x -= this.speed;
+      this.distanceTravelled += this.speed;
     }
-    background(backgroundImage);
-    if (keyDown(RIGHT_ARROW) && bike.position.x < (width - (bikeImage.width / 2))) {
-      bike.position.x += 2;
+  },
+  addFutureTiles: function () {
+    if (this.floorTiles.length >= 3) {
+      return;
     }
-    if (keyDown(LEFT_ARROW) && bike.position.x > (bikeImage.width / 2)) {
-      bike.position.x -= 2;
+    var previousTile = this.floorTiles[this.floorTiles.length - 1];
+    var biggestJumpableHeight = previousTile.height + player.height * 3.5;
+    if (biggestJumpableHeight > this.highestFloor) {
+      biggestJumpableHeight = this.highestFloor;
     }
-    obstacle.position.y = obstacle.position.y + 3;
-    if (obstacle.position.y > height) {
-      obstacle.position.y = 0;
-      obstacle.position.x = random(5, width - 5);
+    var randomHeight = Math.floor(Math.random() * biggestJumpableHeight) + player.height;
+    var leftValue = (previousTile.x + previousTile.width);
+    var next = new floor(leftValue, randomHeight);
+    this.floorTiles.push(next);
+  },
+  cleanOldTiles: function () {
+    for (index in this.floorTiles) {
+      if (this.floorTiles[index].x <= -this.floorTiles[index].width) {
+        this.floorTiles.splice(index, 1);
+        this.tilesPassed++;
+        if (this.tilesPassed % 3 == 0 && this.speed < this.maxSpeed) {
+          this.speed++;
+        }
+      }
     }
-    drawSprites();
+  },
+  getDistanceToFloor: function (playerX) {
+    for (index in this.floorTiles) {
+      var tile = this.floorTiles[index];
+      if (tile.x <= playerX && tile.x + tile.width >= playerX) {
+        return tile.height;
+      }
+    }
+    return -1;
+  },
+  tick: function () {
+    if (!this.autoScroll) {
+      return;
+    }
+    this.cleanOldTiles();
+    this.addFutureTiles();
+    this.moveFloor();
+  },
+  draw: function () {
+    ctx.fillStyle = "cyan";
+    ctx.fillRect(0, 0, this.width, this.height);
+    for (index in this.floorTiles) {
+      var tile = this.floorTiles[index];
+      var y = world.height - tile.height;
+      ctx.fillStyle = "indigo";
+      ctx.fillRect(tile.x, y, tile.width, tile.height);
+    }
+    ctx.fillStyle = "white";
+    ctx.font = "28px Arial";
+    ctx.fillText("Speed: " + this.speed, 10, 40);
+    ctx.fillText("Travelled: " + this.distanceTravelled, 10, 75);
   }
+};
+var player = {
+  x: 160,
+  y: 340,
+  height: 20,
+  width: 20,
+  downwardForce: world.gravity,
+  jumpHeight: 0,
+  getDistanceFor: function (x) {
+    var platformBelow = world.getDistanceToFloor(x);
+    return world.height - this.y - platformBelow;
+  },
+  applyGravity: function () {
+    this.currentDistanceAboveGround = this.getDistanceFor(this.x);
+    var rightHandSideDistance = this.getDistanceFor(this.x + this.width);
+    if (this.currentDistanceAboveGround < 0 || rightHandSideDistance < 0) {
+      world.stop();
+    }
+  },
+  processGravity: function () {
+    this.y += this.downwardForce;
+    var floorHeight = world.getDistanceToFloor(this.x, this.width);
+    var topYofPlatform = world.height - floorHeight;
+    if (this.y > topYofPlatform) {
+      this.y = topYofPlatform;
+    }
+    if (this.downwardForce < 0) {
+      this.jumpHeight += (this.downwardForce * -1);
+      if (this.jumpHeight >= player.height * 6) {
+        this.downwardForce = world.gravity;
+        this.jumpHeight = 0;
+      }
+    }
+  },
+  keyPress: function (keyInfo) {
+    var floorHeight = world.getDistanceToFloor(this.x, this.width);
+    var onTheFloor = floorHeight == (world.height - this.y);
+    if (onTheFloor) {
+      this.downwardForce = -8;
+    }
+  },
+  tick: function () {
+    this.processGravity();
+    this.applyGravity();
+  },
+  draw: function () {
+    ctx.fillStyle = "mediumvioletred";
+    ctx.fillRect(player.x, player.y - player.height, this.height, this.width);
+  }
+};
+window.addEventListener("keypress", function (keyInfo) { player.keyPress(keyInfo); }, false);
+function tick() {
+  player.tick();
+  world.tick();
+  world.draw();
+  player.draw();
+  window.setTimeout("tick()", 1000 / 60);
 }
-
-function gameOver() {
-  background(0);
-  textAlign(CENTER);
-  fill("white");
-  text("Game Over!", width / 2, height / 2);
-  text("Click anywhere to try again", width / 2, 3 * height / 4);
-}
-
-function mouseClicked() {
-  isGameOver = false;
-  bike.position.x = width / 2;
-  bike.position.y = height - (bikeImage.height / 2);
-  obstacle.position.x = width / 2;
-  obstacle.position.y = 0;
-}
+tick();
