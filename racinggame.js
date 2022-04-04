@@ -71,12 +71,12 @@ var world = {
     this.moveFloor();
   },
   draw: function () {
-    ctx.fillStyle = "cyan";
+    ctx.fillStyle = "blue";
     ctx.fillRect(0, 0, this.width, this.height);
     for (index in this.floorTiles) {
       var tile = this.floorTiles[index];
       var y = world.height - tile.height;
-      ctx.fillStyle = "indigo";
+      ctx.fillStyle = "grey";
       ctx.fillRect(tile.x, y, tile.width, tile.height);
     }
     ctx.fillStyle = "white";
