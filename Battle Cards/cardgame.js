@@ -1,6 +1,6 @@
 var playerCardArray = [[0,0,0,"",""], [0,0,0,"",""], [0,0,0,"",""]];
 var opponentCardArray = [[0,0,0,"",""], [0,0,0,"",""], [0,0,0,"",""]];
-var imageCardArray = ["goose.png","tiger.png","octopus.png","snake.jpg","dragon.jpg","griffin.png"];
+var imageCardArray = ["cards/goose.png","cards/tiger.png","cards/octopus.png","cards/snake.jpg","cards/dragon.jpg","cards/griffin.png"];
 var playerHealth = 20;
 var opponentHealth = 20;
 
