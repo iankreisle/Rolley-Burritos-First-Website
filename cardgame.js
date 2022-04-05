@@ -19,7 +19,7 @@ var gameOver = false;
 function addRandomCard() {
     for(let i = 1; i < 7; i++){
         var number = Math.floor(Math.random()*imageCardArray.length); 
-        console.log(document.getElementById("card-" + i).innerHTML = '<img src="'+ imageCardArray[number]+'" />'); 
+        console.log(document.getElementById("card-" + i).src = imageCardArray[number]); 
     }
 }
 
