@@ -14,6 +14,13 @@ var defenseValues;
 var imageValues;
 var titles;
 
+function addRandomCard() {
+    for(let i = 1; i < 7; i++){
+        var number = Math.floor(Math.random()*imageCardArray.length); 
+        console.log(document.getElementById("card-" + i).innerHTML = '<img src="'+ imageCardArray[number]+'" />'); 
+    }
+}
+
 function initGame() {
     playerHealthDisp = document.getElementById('player-health');
     opponentHealthDisp = document.getElementById('opponent-health');
@@ -40,7 +47,7 @@ function initGame() {
             playerCardArray[i-3][1] = healthVal;
             playerCardArray[i-3][2] = defenseVal;
             playerCardArray[i-3][3] = "Player card  number: " + (i-3);
-            console.log("i is: " + i + " " +playerCardArray[i-3][2]);
+            console.log("i is: " + i + " " + playerCardArray[i-3][2]);
         }
     } 
 
@@ -48,6 +55,7 @@ function initGame() {
         var imageVal = parseInt(Math.random() * 5);
         imageValues[i].innerHTML = '<img src="' + imageCardArray[imageVal] + '" class="card-img-top" alt="...">';
     }*/
+    addRandomCard();
     updateDisplay();
 }
 
