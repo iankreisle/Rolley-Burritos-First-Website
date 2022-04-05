@@ -1,6 +1,6 @@
 var playerCardArray = [[0,0,0,"",""], [0,0,0,"",""], [0,0,0,"",""]];
 var opponentCardArray = [[0,0,0,"",""], [0,0,0,"",""], [0,0,0,"",""]];
-var imageCardArray = ["cards/goose.png","cards/tiger.png","cards/octopus.png","cards/snake.jpg","cards/dragon.jpg","cards/griffin.png"];
+var imageCardArray = ["cards/goose.png","cards/tiger.png","cards/octopus.jpg","cards/snake.jpg","cards/dragon.jpg","cards/griffin.png"];
 var playerHealth = 20;
 var opponentHealth = 20;
 
@@ -13,6 +13,8 @@ var healthValues;
 var defenseValues;
 var imageValues;
 var titles;
+var alertOn = true;
+var gameOver = false;
 
 function addRandomCard() {
     for(let i = 1; i < 7; i++){
@@ -112,17 +114,31 @@ function cardDeathMatch() {
             }
             updateDisplay();
             checkGameOver();
+            
         }
 }
+
+function restart(){
+    playerHealth = 20;
+    opponentHealth = 20;
+    initGame();
+}
+
 function checkGameOver() {
-    if (playerHealth < 1 && opponentHealth < 1) {
+    if (playerHealth < 1 && opponentHealth < 1 && alertOn) {
         alert("It was a tie");
+        alertOn = false;
+        gameOver = true;
     }
-    else if (playerHealth < 1) {
+    else if (playerHealth < 1 && alertOn) {
         alert("You lost");
+        alertOn = false;
+        gameOver = true;
     }
-    else if (opponentHealth < 1) {
+    else if (opponentHealth < 1 && alertOn) {
         alert("You won");
+        alertOn = false;
+        gameOver = true;
     }
 }
 initGame();

@@ -43,8 +43,8 @@ p.nested{
 }
 
 img.titleImage{
-  width: 500px;
-  height: auto;
+  width: 550px;
+  height: 450px;
   max-width: 100%;
 }
 
@@ -354,8 +354,8 @@ body.cyberBackground{
 .heart {
   position: absolute;
   margin: auto;
-  top: 30px;
-  left: 140px;
+  top: 2rem;
+  left: 30rem;
   background-color: red;
   height: 20px;
   width: 20px;
