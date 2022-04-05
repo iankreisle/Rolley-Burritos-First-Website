@@ -121,6 +121,8 @@ function cardDeathMatch() {
 function restart(){
     playerHealth = 20;
     opponentHealth = 20;
+    alertOn = true;
+    gameOver = false;
     initGame();
 }
 
