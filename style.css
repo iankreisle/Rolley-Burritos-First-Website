@@ -472,3 +472,12 @@ img#spencerPic{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
 }
+
+/*card game*/
+.health-display{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card-img-top{
+  width: 12rem;
+}
