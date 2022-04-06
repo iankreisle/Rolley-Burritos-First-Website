@@ -18,12 +18,8 @@ p.nested{
 }
 
 /* Add some shadows to create a card effect */
-.card{
+.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.profileCard{
-  height: 45rem;
 }
 
 .title {
@@ -48,7 +44,7 @@ p.nested{
 
 img.titleImage{
   width: 550px;
-  height: auto;
+  height: 450px;
   max-width: 100%;
 }
 
