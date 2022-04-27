@@ -1,0 +1,24 @@
+.cards{
+    text-align: center;
+    background: rgba(255,255,255,0.7);
+    color: black;
+}
+.buttons{
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+}
+.title
+{
+    text-align: center;
+}
+.center{
+    text-align: center;
+}
+ion-content {
+    --background: none;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.cx5pgLNWqkNHWTevdudIXAHaDu%26pid%3DApi&f=1");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
